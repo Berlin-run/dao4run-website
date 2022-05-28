@@ -1,11 +1,12 @@
-import Button from 'react-bootstrap/Button'
-import Navbar from 'react-bootstrap/Navbar'
-import Container from 'react-bootstrap/Container'
-import Nav from 'react-bootstrap/Nav'
+import { Button, Navbar, Container, Nav} from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import logo from '../static/img/logo-2.png'
+import useWeb3Modal from "../hooks/useWeb3Modal"
 
-function navbar() {
+function Nbar() {
+  const { web3Modal, loadWeb3Modal, logoutOfWeb3Modal, chainId } =
+    useWeb3Modal();
+  console.log(chainId);
   return (
     <Navbar bg="light" expand="lg" sticky="top">
       <Container>
@@ -18,12 +19,28 @@ function navbar() {
             <Nav.Link href="#plan">运营</Nav.Link>
             <Nav.Link href="#qa">Q&A</Nav.Link>
             <Nav.Link href="#about">成员</Nav.Link>
-            <Button variant="primary">wallet</Button>
-
+            {web3Modal.cachedProvider ? (
+            <Nav.Link onClick={() => mintNFT()}>购买门票</Nav.Link>):(console.log(111))}
+            {!web3Modal.cachedProvider ? (
+              <Button variant="primary" onClick={() => loadWeb3Modal()}>Connect Wallet</Button>
+            ):(
+              <Button
+              variant="outline-success"
+              onClick={() => logoutOfWeb3Modal()}
+            >
+                Disconnect
+              </Button>
+            )}
           </Nav>
         </Navbar.Collapse>
       </Container>
     </Navbar>
   );
 }
-export default navbar;
+
+
+export default Nbar;
+
+function mintNFT() {
+  console.log("22222")
+}
