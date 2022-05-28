@@ -1,0 +1,144 @@
+/* Navbar */
+
+.navbar {
+  transition: background-color 0.4s;
+  position: sticky;
+  top: 0;
+  width: 100% ;
+  padding: 0.5rem;
+  background-color: transparent;
+  z-index: 2;
+  backdrop-filter: blur(2px);
+}
+.navbar .logo {
+  align-items: center;
+  align-content: center;
+  height: 90%;
+}
+.navbar ul { 
+  transition: all 0.2s;
+
+  margin-left: 17rem;
+  list-style: none;
+}
+.navbar ul li {
+  margin: 0 1rem;
+  display: inline-block;
+}
+.navbar ul li a {
+  transition: all 0.2s;
+  font-size: 20px;
+  cursor: pointer;
+
+  text-decoration: none;
+  color: rgb(243, 243, 243);
+  font-weight: 500;
+
+}
+/* .button {
+  cursor: pointer;
+  transition: transform 0.2s linear;
+  position: fixed;
+  transform:translateX(300%);
+  top: 20px;
+  right: 15px;
+  z-index: 1;
+} */
+.burger {
+  transition: all 0.2s;
+
+  margin-bottom: 0.45rem;
+  width: 25px;
+  height: 3px;
+  background-color: white;
+}
+/* Header */
+
+
+header {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* box-shadow: inset 0 0 0 900px rgba(0, 0, 0, 0.1); */
+}
+header .title {
+  margin:5%;
+  margin-bottom: -2%;
+}
+header h1 {
+  z-index: 1;
+  color: rgb(0, 0, 0);
+  font-size: 64px;
+}
+
+
+h2 {
+  z-index: 1;
+  color: rgb(0, 0, 0);
+  font-size: 30px;
+}
+
+/* Intro */
+.bluebg {
+  /* background: #000; */
+  box-shadow: inset 0 0 0 900px rgba(12, 53, 136, 0.1);
+  width: 100%;
+  margin: 5%;
+  padding: 3%;
+
+}
+.whitebg {
+  margin: 5%;
+  padding: 3%
+}
+h2-red {
+  z-index: 1;
+  color: rgb(255, 0, 0);
+  font-size: 30px;
+  font-weight: bold;
+
+}
+p {
+  font-size: 20px;
+  color: rgb(0, 0, 0);
+}
+
+li {
+  font-size: 20px;
+  color: rgb(0, 0, 0);
+}
+
+.list {
+  margin-left: 10%;
+}
+red {
+  font-size: 25px;
+  color: #ff0000;
+  font-weight: bold;
+
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+  fill:rgb(166, 47, 216)
+}
+
+.pie {
+  width: 40%;
+  font-size: 5px;
+  color: #df335b;
+}
+
+.profile {
+  width: 10em;
+  height: 10em;
+  border-style: solid;
+  border-color: rgba(4, 0, 255, 0.293);
+}
+
+
+
